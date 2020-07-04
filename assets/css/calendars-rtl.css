@@ -1,0 +1,290 @@
+/**
+ * Styles for the calendars
+ */
+
+.mini-calendar,
+.medium-calendar {
+	padding-top: 1em;
+	position: relative;
+	z-index: 89;
+	text-align: center;
+	}
+	.mini-calendar {
+		float: left;
+	}
+	.next-to-mini-calendar {
+		margin-right: 14em;
+	}
+	.mini-calendar.float-right {
+		float: left;
+	}
+	.mini-calendar.float-right + .next-to-mini-calendar {
+		margin-right: 0;
+		margin-left: 14em;
+	}
+	.calendar-controls {
+		position: absolute;
+		z-index: 89;
+		top: 0;
+		right: 50%;
+		width: 9em;
+		margin-right: -5.083em;
+		text-align: center;
+		line-height: 1.333em;
+		padding: 0.25em 0.5em;
+		border: 1px solid white;
+		-moz-border-radius: 0.417em;
+		-webkit-border-radius: 0.417em;
+		-webkit-background-clip: padding-box;
+		border-radius: 0.417em;
+		-moz-box-shadow: 0 rgba(0, 0, 0, 0.5) 3px 0;
+		-webkit-box-shadow: 0 rgba(0, 0, 0, 0.5) 3px 0;
+		box-shadow: 0 rgba(0, 0, 0, 0.5) 3px 0;
+		color: #3399cc;
+		background: #dfdfdf url(../images/button-bg.png) repeat-x top;
+		-webkit-background-size: 100% 100%;
+		-moz-background-size: 100% 100%;
+		-o-background-size: 100% 100%;
+		background-size: 100% 100%;
+		background: -moz-linear-gradient(
+			top,
+			#f6f6f6,
+			#dfdfdf
+		);
+		background: -webkit-gradient(
+			linear,
+			left top, left bottom,
+			from(#f6f6f6),
+			to(#dfdfdf)
+		);
+		}
+		/* IE class */
+		.ie .calendar-controls {
+			border-color: #cccccc;
+		}
+		.calendar-controls .calendar-prev,
+		.calendar-controls .calendar-next {
+			display: block;
+			height: 1.333em;
+			line-height: 1.333em;
+			width: 1.333em;
+			padding: 0.25em;
+			text-align: center;
+			background-size: 2px 100%;
+			-moz-background-size: 2px 100%;
+			-webkit-background-size: 2px 100%;
+			margin: -0.25em 0 -0.333em;
+		}
+		.calendar-controls .calendar-prev {
+			float: right;
+			background: url(../images/menu-border.png) no-repeat left center;
+			margin-right: -0.5em;
+		}
+		.calendar-controls .calendar-next {
+			float: left;
+			background: url(../images/menu-border.png) no-repeat right center;
+			margin-left: -0.5em;
+		}
+		.calendar-controls .calendar-prev img,
+		.calendar-controls .calendar-next img {
+			vertical-align: -15%;
+			}
+			.calendar-controls .calendar-prev img {
+				margin-right: -2px;
+			}
+			.calendar-controls .calendar-next img {
+				margin-left: -2px;
+			}
+	
+	.mini-calendar table,
+	.medium-calendar table {
+		border: 1px solid #cccccc;
+		border-collapse: separate;
+		}
+		.mini-calendar thead th,
+		.mini-calendar thead td,
+		.medium-calendar thead th,
+		.medium-calendar thead td {
+			height: 3em;
+			padding-bottom: 0.25em;
+			text-align: center;
+			vertical-align: bottom;
+			font-weight: normal;
+			color: #808080;
+			background: #cccccc url(../images/mini-calendar-head-bg.png) repeat-x top;
+			-webkit-background-size: 100% 100%;
+			-moz-background-size: 100% 100%;
+			-o-background-size: 100% 100%;
+			background-size: 100% 100%;
+			background: -moz-linear-gradient(
+				top,
+				white,
+				#e7e7e7 80%,
+				#cccccc
+			);
+			background: -webkit-gradient(
+				linear,
+				left top, left bottom,
+				from(white),
+				to(#cccccc),
+				color-stop(0.8, #e7e7e7)
+			);
+			-moz-text-shadow: 1px 1px 0 white;
+			-webkit-text-shadow: 1px 1px 0 white;
+			text-shadow: 1px 1px 0 white;
+			border-bottom: 1px solid #cccccc;
+			}
+			.mini-calendar thead th:last-child,
+			.mini-calendar thead td:last-child,
+			.medium-calendar thead th:last-child,
+			.medium-calendar thead td:last-child {
+				border-left: 0;
+			}
+			/* IE class */
+			.mini-calendar thead th.last-child,
+			.mini-calendar thead td.last-child,
+			.medium-calendar thead th.last-child,
+			.medium-calendar thead td.last-child {
+				border-left: 0;
+			}
+		.mini-calendar tbody th,
+		.mini-calendar tbody td,
+		.medium-calendar tbody th,
+		.medium-calendar tbody td {
+			background: white;
+			text-align: center;
+			vertical-align: middle;
+			color: #333333;
+			}
+			.mini-calendar tbody th,
+			.mini-calendar tbody td {
+				font-size: 0.833em;
+				font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Sans", Arial, Helvetica, sans-serif;
+				width: 2.1em;
+				height: 2.2em;
+			}
+				
+			.mini-calendar tbody th:last-child,
+			.mini-calendar tbody td:last-child,
+			.medium-calendar tbody th:last-child,
+			.medium-calendar tbody td:last-child {
+				border-left: 0;
+			}
+			/* IE class */
+			.mini-calendar tbody th.last-child,
+			.mini-calendar tbody td.last-child,
+			.medium-calendar tbody th.last-child,
+			.medium-calendar tbody td.last-child {
+				border-left: 0;
+			}
+			.mini-calendar tbody tr:last-child th,
+			.mini-calendar tbody tr:last-child td,
+			.medium-calendar tbody tr:last-child th,
+			.medium-calendar tbody tr:last-child td {
+				border-bottom: 0;
+			}
+			/* IE class */
+			.mini-calendar tbody tr.last-child th,
+			.mini-calendar tbody tr.last-child td,
+			.medium-calendar tbody tr.last-child th,
+			.medium-calendar tbody tr.last-child td {
+				border-bottom: 0;
+			}
+			
+			.mini-calendar tbody a,
+			.mini-calendar tbody div,
+			.medium-calendar tbody a,
+			.medium-calendar tbody div {
+				display: block;
+				position: relative;
+				z-index: 89;
+				height: 100%;
+			}
+			.mini-calendar tbody a,
+			.medium-calendar tbody a {
+				color: #333333;
+				}
+				.mini-calendar tbody a,
+				.mini-calendar tbody div {
+					line-height: 2.22em;
+				}
+			
+			.mini-calendar tbody .week-end,
+			.mini-calendar tbody .week-end a,
+			.medium-calendar tbody .week-end,
+			.medium-calendar tbody .week-end a {
+				color: #808080;
+			}
+			.mini-calendar tbody .other-month,
+			.mini-calendar tbody .other-month a,
+			.medium-calendar tbody .other-month,
+			.medium-calendar tbody .other-month a {
+				color: #CCCCCC;
+				font-weight: normal;
+			}
+			.mini-calendar tbody .today,
+			.mini-calendar tbody .today a,
+			.medium-calendar tbody .today,
+			.medium-calendar tbody .today a {
+				color: #3399cc;
+				font-weight: bold;
+				}
+				.mini-calendar tbody span.today,
+				.medium-calendar tbody span.today {
+					background: #3399cc;
+					color: white;
+					padding: 0.25em 0.5em;
+					-moz-border-radius: 0.417em;
+					-webkit-border-radius: 0.417em;
+					-webkit-background-clip: padding-box;
+					border-radius: 0.417em;
+					}
+					.mini-calendar tbody a:hover span.today,
+					.medium-calendar tbody a:hover span.today {
+						background: white;
+						color: #3399cc;
+						-moz-text-shadow: none;
+						-webkit-text-shadow: none;
+						text-shadow: none;
+						-moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+						-webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+						box-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+					}
+			
+			/* Date picker integration - Thanks to sbkyle! */
+			.mini-calendar tbody a:hover, .mini-calendar tbody a.selected {
+				background: #72c6e4 url(../images/mini-cal-bg.png) repeat-x top;
+				background: -moz-linear-gradient(
+					top,
+					#0c5fa5,
+					#72c6e4
+				);
+				background: -webkit-gradient(
+					linear,
+					left top, left bottom,
+					from(#0c5fa5),
+					to(#72c6e4)
+				);
+				-moz-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.5);
+				-webkit-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.5);
+				box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.5);
+				}
+				.mini-calendar tbody a.selected {
+					color:#FFF;
+					font-weight:bold;
+				}
+				.datepick-month-year { font-size:.8em !important; padding:0 !important; }
+				.datepick {direction:rtl;  width:auto !important }
+				.datepick-popup { z-index:100; } 
+
+			
+			.mini-calendar tbody th.unavailable,
+			.mini-calendar tbody td.unavailable,
+			.medium-calendar tbody th.unavailable,
+			.medium-calendar tbody td.unavailable {
+				background: white url(../images/lite-grey-stripes.png);
+				color: #b0b0b0;
+				-moz-text-shadow: 1px 1px 0 white;
+				-webkit-text-shadow: 1px 1px 0 white;
+				text-shadow: 1px 1px 0 white;
+				}
